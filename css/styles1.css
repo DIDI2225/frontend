@@ -1,0 +1,224 @@
+/* Réinitialisation basique */
+
+:root {
+  --pink: #e84393;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+head .logo {
+  font-size: 3rem;
+  color: black;
+  font-weight: bolder;
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+header .navbar a:hover {
+  color: var(--pink);
+}
+
+header .icons a {
+  color: #333;
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+}
+header .icons a:hover {
+  color: var(--pink);
+}
+
+header #toggler {
+  display: none;
+}
+header .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 1rem solid rgba(0, 0, 0, 3);
+  display: none;
+}
+
+/* CONTENU INTRO */
+.intro-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  gap: 4rem;
+
+  background-image: url("zelij.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #fff;
+  text-shadow: 1px 1px 3px white;
+  z-index: 1;
+}
+
+.intro-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* assombrit l’image */
+  z-index: -1;
+}
+
+.titre-principal {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fa796b;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px #ddd;
+}
+
+.texte-intro {
+  font-size: 2.3rem;
+  line-height: 1.7;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 1rem auto;
+  font-weight: 400;
+}
+
+.highlight {
+  background-color: #fff3cd;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.participation-contenu h2,
+.en-savoir-plus-contenu h2,
+.contact-contenu h2 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff06d;
+}
+
+.participation-contenu p,
+.en-savoir-plus-contenu p,
+.contact-contenu p {
+  font-size: 2.2rem;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: #e94e1b;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #c73f14;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+    border: none;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: none;
+    border-radius: 5rem;
+    display: block;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

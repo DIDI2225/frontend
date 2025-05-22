@@ -1,0 +1,43 @@
+/* Page avec fond image, texte centré en blanc, bouton orange sans soulignement */
+
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  
+  
+  background: url('ab.png') center/cover no-repeat;
+  
+  
+  display: flex;
+  justify-content: center;
+  
+  flex-direction: column;
+  text-align: center;
+  color: white ;
+
+
+  width: 800px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 90vh;
+  position: relative;
+ }
+
+
+
+.btn {
+  background: orange;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+

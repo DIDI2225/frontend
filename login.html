@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion / Inscription</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- Permet l'adaptation du design sur les écrans mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="welcome-message">
+      <p>Chaque connexion commence par</p>
+      <p>un sourire et une tasse de thé.</p>
+    </div>
+
+    <div class="login-page">
+      <div class="form">
+        <!-- Formulaire d'inscription -->
+        <!-- placeholde Le texte "Entrez votre nom" ici sert de guide pour l'utilisateur sur ce qu'il doit entrer dans le champ.
+       Il disparaît dès que l'utilisateur commence à écrire. -->
+        <form class="register-form">
+          <input type="text" required placeholder="nom" />
+          <input type="text" required placeholder="prenom" />
+          <input type="password" required placeholder="mot de passe" />
+          <input type="text" required placeholder="adresse e-mail" />
+          <button>créer</button>
+          <p class="message">Déjà inscrit ? <a href="#">Se connecter</a></p>
+        </form>
+
+        <!-- Formulaire de connexion -->
+        <form class="login-form">
+          <input
+            type="text"
+            required
+            placeholder="nom et prenom d'utilisateur"
+          />
+          <input type="password" required placeholder="mot de passe" />
+          <button>connexion</button>
+          <p class="message">
+            Pas encore inscrit ? <a href="#">Créer un compte</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Sélectionner tous les liens <a> qui se trouvent dans les éléments avec la classe "message"
+      document.querySelectorAll(".message a").forEach(function (link) {
+        // Ajouter un gestionnaire d'événement 'click' à chaque lien
+        link.addEventListener("click", function () {
+          // Sélectionner tous les formulaires sur la page (inscription et connexion)
+          var forms = document.querySelectorAll("form");
+
+          // Parcourir chaque formulaire
+          forms.forEach(function (form) {
+            // Si le formulaire est caché (display: none), on l'affiche
+            if (getComputedStyle(form).display === "none") {
+              form.style.display = "block";
+            } else {
+              // Sinon, on le cache
+              form.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
