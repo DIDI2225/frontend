@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/login.css" />
     <!-- Permet l'adaptation du design sur les écrans mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="welcome-message">
@@ -17,26 +21,82 @@
     <div class="login-page">
       <div class="form">
         <!-- Formulaire d'inscription -->
-        <!-- placeholde Le texte "Entrez votre nom" ici sert de guide pour l'utilisateur sur ce qu'il doit entrer dans le champ.
+        <!-- placeholde Le texte "Entrez votre nom" ici sert de guide pour l'utilisateur sur 
+         ce qu'il doit entrer dans le champ.
        Il disparaît dès que l'utilisateur commence à écrire. -->
-        <form class="register-form">
+        <form class="register-form" id="registerForm">
           <input type="text" required placeholder="nom" />
           <input type="text" required placeholder="prenom" />
-          <input type="password" required placeholder="mot de passe" />
+
+          <div style="position: relative; display: inline-block">
+            <input
+              type="password"
+              placeholder="mot de passe"
+              required
+              style="padding-right: 230px"
+            />
+            <i
+              class="fa fa-eye"
+              onclick="const input = this.previousElementSibling; input.type = input.type === 'password' ? 'text' : 'password'; this.classList.toggle('fa-eye-slash');"
+              style="
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: #555;
+              "
+            ></i>
+          </div>
           <input type="text" required placeholder="adresse e-mail" />
-          <button>créer</button>
+          <input type="tel" required placeholder="numéro de téléphone" />
+          <input
+            type="number"
+            name="codepostal"
+            placeholder="Code postal"
+            required
+          />
+
+          <input type="text" name="adresse" placeholder="Adresse" required />
+          <input type="text" name="pays" placeholder="Pays" required />
+
+          <button type="button" id="create-button">créer</button>
+
           <p class="message">Déjà inscrit ? <a href="#">Se connecter</a></p>
         </form>
 
         <!-- Formulaire de connexion -->
-        <form class="login-form">
+        <form class="login-form" action="profil.html" method="get">
           <input
             type="text"
             required
             placeholder="nom et prenom d'utilisateur"
           />
-          <input type="password" required placeholder="mot de passe" />
+          <!-- <input type="password" required placeholder="mot de passe" /> -->
+
+          <div style="position: relative; display: inline-block">
+            <input
+              type="password"
+              placeholder="mot de passe"
+              required
+              style="padding-right: 230px"
+            />
+            <i
+              class="fa fa-eye"
+              onclick="const input = this.previousElementSibling; input.type = input.type === 'password' ? 'text' : 'password'; this.classList.toggle('fa-eye-slash');"
+              style="
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: #555;
+              "
+            ></i>
+          </div>
+
           <button>connexion</button>
+
           <p class="message">
             Pas encore inscrit ? <a href="#">Créer un compte</a>
           </p>
@@ -64,6 +124,19 @@
           });
         });
       });
+      // Empêche l'envoi réel du formulaire
+      // Bloquer l'envoi du formulaire et afficher le message
+      document
+        .getElementById("create-button")
+        .addEventListener("click", function () {
+          alert("👋 Bienvenue ! Votre compte a été créé avec succès !.");
+          // Cache le formulaire d'inscription
+          document.querySelector(".register-form").style.display = "none";
+          // Affiche le formulaire de connexion
+          document.querySelector(".login-form").style.display = "block";
+          // Réinitialise le formulaire d'inscription
+          document.getElementById("registerForm").reset();
+        });
     </script>
   </body>
 </html>

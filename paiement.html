@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paiement.css">
+    <title>paiement</title>
+</head>
+<body>
+
+<div class="container">
+     <!-- Affiche un message de confirmation après validation du formulaire -->
+        <form onsubmit="alert('Votre commande a bien été enregistrée. Merci !');">
+   
+
+        <div class="row">
+            <div class="col">
+                <h3 class="title">adresse de facturation</h3>
+                <div class="inputBox">
+                    <span>nom complet :</span>
+                    <input type="text" placeholder="brahim soumia" required>
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="exemple@exemple.com" required>
+                </div>
+                <div class="inputBox">
+                    <span>adresse :</span>
+                    <input type="text" placeholder="appartement - rue - quartier" required>
+                </div>
+                <div class="inputBox">
+                    <span>ville :</span>
+                    <input type="text" placeholder="souk el arbaa" required>
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>région :</span>
+                        <input type="text" placeholder="maroc" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>code postal :</span>
+                        <input type="text" placeholder="20000" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3 class="title">paiement</h3>
+                <div class="inputBox">
+                    <span>cartes acceptées :</span>
+                    <img src="image/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>nom sur la carte :</span>
+                    <input type="text" placeholder="m. brahim soumia" required>
+                </div>
+                <div class="inputBox">
+                    <span>numéro de carte :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444" required>
+                </div>
+                <div class="inputBox">
+                    <span>mois d'expiration :</span>
+                    <input type="text" placeholder="mars" required>
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>année d'expiration:</span>
+                        <input type="number" placeholder="2023" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="valider" class="submit-btn">
+    </form>
+</div>    
+
+</body>
+</html>

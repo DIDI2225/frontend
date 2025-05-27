@@ -1,0 +1,388 @@
+/* STYLES EXISTANTS - CONSERVÉS À L'IDENTIQUE */
+.fa-shopping-cart {
+  position: relative;
+}
+
+.fa-shopping-cart::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f74848;
+  text-align: center;
+}
+
+h1 {
+  color: beige;
+}
+
+.category {
+  margin-bottom: 30px;
+}
+
+.product {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  background: #32CD32;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product button {
+  padding: 10px 15px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background: orange;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.favori {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: gray;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.favori:hover {
+  color: red;
+}
+
+/* MODIFICATIONS UNIQUEMENT POUR LE PANIER (BOÎTE ENCADRÉE) */
+#cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgb(255, 243, 243);
+  border: 2px solid #8B0000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#cart-icon i {
+  color: #8B0000;
+  font-size: 1.5rem;
+}
+
+#cart-sidebar {
+  position: fixed;
+  top: 80px; /* Position sous l'icône */
+  right: 20px;
+  width: 400px;
+  background: rgb(255, 255, 255);
+  border: 2px solid #8B0000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 15px;
+  display: none; /* Caché par défaut */
+}
+
+#cart-sidebar.active {
+  display: block; /* Visible quand actif */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3e9e9;
+}
+
+#close-cart {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8B0000;
+}
+
+.cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: right;
+  margin: 15px 0;
+}
+
+#validate-cart {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+#validate-cart:hover {
+  background: #45a049;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+} hhhh 
+/
+/* Styles Favoris */
+
+
+
+/* ===== STYLES FAVORIS - COPIE EXACTE DU PANIER ===== */
+/* Icône favoris (identique au panier mais à gauche) */
+#favorites-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Seule différence: left au lieu de right */
+  background: rgb(255, 243, 243);
+  border: 2px solid #8B0000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001; /* Même z-index que le panier */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/*#favorites-icon i {
+  color: #8B0000;
+  font-size: 1.5rem;
+  position: relative;
+}
+ FORÇAGE DU POSITIONNEMENT À GAUCHE */
+#favorites-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Position gauche forcée */
+  right: auto;
+  margin: 0;
+  transform: none;
+  background: rgb(255, 243, 243);
+  border: 2px solid #8B0000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#favorites-sidebar {
+  position: fixed;
+  top: 80px;
+  left: 20px; /* Position gauche forcée */
+  right: auto;
+  margin: 0;
+  transform: none;
+  width: 320px;
+  display: none;
+  background: white;
+  border: 2px solid #8B0000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 15px;
+}
+
+#favorites-sidebar.active {
+  display: block;
+}
+#favorites-icon i::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Sidebar favoris (identique au panier mais à gauche) */
+/* FORÇAGE ABSOLU DU POSITIONNEMENT */
+
+
+#favorites-sidebar.active {
+  display: block !important;
+  animation: none !important;
+}
+
+#favorites-sidebar.active {
+  display: block; /* Apparition instantanée comme le panier */
+}
+
+/* Structure interne (identique au panier) */
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3e9e9;
+}
+
+#close-favorites {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8B0000;
+}
+
+.favorites-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Bouton "Vider" (seule différence visuelle avec le panier) */
+#clear-favorites {
+  width: 100%;
+  padding: 12px;
+  background: #ff6b6b; /* Rouge au lieu de vert */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+#clear-favorites:hover {
+  background: #e05555; /* Rouge foncé au survol */
+}
+
+.empty-favorites {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+/* ===== [FIN] STYLES FAVORIS ===== */
+/* FORÇAGE ABSOLU DU POSITIONNEMENT */
+
+#favorites-sidebar.active {
+  display: block !important;
+}
+
+.change-quantity { 
+
+  
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0 2px;
+}
+.favori.active { color: red; }
+
+
+
+
+
+
+
+/* ===== VERSION MOBILE ADAPTÉE ===== */
+@media (max-width: 768px) {
+  /* ... autres styles ... */
+
+  .product {
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+    position: relative; /* important pour .favori en absolute */
+  }
+
+  .product button {
+    max-width: 160px;
+    font-size: 0.8rem;
+    padding: 10px 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .favori {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+    z-index: 10;
+    user-select: none;
+  }
+
+}
+

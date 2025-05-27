@@ -1,0 +1,152 @@
+/* ---------------------- */
+/* Styles généraux        */
+/* ---------------------- */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fff5f0;
+  color: #4a2d12;
+  margin: 2.4rem;
+  line-height: 1.8;
+}
+
+/* ---------------------- */
+/* Titres principaux      */
+/* ---------------------- */
+h1, h2 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #b84a2b;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 3.2px solid #da7b4e;
+  display: inline-block;
+  padding-bottom: 0.48rem;
+}
+
+/* ---------------------- */
+/* Bloc d’introduction    */
+/* ---------------------- */
+.intro, .goal {
+  max-width: 960px;
+  margin: 0 auto 2.4rem;
+  font-size: 1.28rem;
+  font-weight: 500;
+}
+
+.goal {
+  background-color: #b7ffbd;
+  padding: 1.6rem;
+  border-left: 6.4px solid #d86b3c;
+  border-radius: 6.4px;
+}
+
+/* ---------------------- */
+/* Cartes de catégories   */
+/* ---------------------- */
+.category {
+  display: flex;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-bottom: 1.6rem;
+  border-bottom: 1.6px solid #e2b792;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.category img {
+  width: 216px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 19.2px;
+  box-shadow: 3.2px 3.2px 3.2px rgba(177, 110, 50, 0.4);
+  flex-shrink: 0;
+}
+
+.category-content {
+  flex: 1;
+}
+
+.category h3 {
+  margin: 0;
+  color: #c15c1a;
+  font-size: 1.44rem;
+  font-weight: 700;
+}
+
+.category p {
+  margin: 0.4rem 0 0.8rem;
+  font-size: 1.12rem;
+}
+
+/* ---------------------- */
+/* Texte fléché           */
+/* ---------------------- */
+.arrow-text {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #843800;
+  font-size: 1.08rem;
+}
+
+.arrow-text::before {
+  content: "→";
+  margin-right: 0.8rem;
+  color: #d65a28;
+  font-weight: 900;
+  font-size: 1.28rem;
+}
+
+/* ---------------------- */
+/* Message de clôture     */
+/* ---------------------- */
+.closing-text {
+  max-width: 960px;
+  margin: 4rem auto 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2e7d32;
+  background-color: #e7f5e9;
+  padding: 1.6rem;
+  border-radius: 11.2px;
+  box-shadow: 0 0 11.2px rgba(34, 139, 34, 0.2);
+}
+
+/* ---------------------- */
+/* Responsive mobile       */
+/* ---------------------- */
+@media (max-width: 768px) {
+  .category {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.96rem;
+  }
+
+  .intro, .goal, .closing {
+    padding: 0.8rem;
+    font-size: 1.12rem;
+  }
+
+  h1 {
+    font-size: 1.92rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}

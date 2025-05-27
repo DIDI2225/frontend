@@ -1,138 +1,411 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nos Catégories</title>
-    <link rel="stylesheet" href="css/styles2.css" />
-     <!-- Ajouter la bibliothèque Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-  <body>
-  
-        
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Catégories</title>
+  <!-- MODIF: Chemin CSS corrigé -->
+  <link rel="stylesheet" href="css/stylescat.css" />
+  <!-- MODIF: Ajout Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Icône Favoris -->
 
 
 
+<!-- Icône Favoris -->
+<div id="favorites-icon">
+  <i class="fas fa-heart" id="favorites-button" data-count="0"></i>
+</div>
 
+<!-- Sidebar Favoris -->
+<div id="favorites-sidebar">
+  <div class="cart-header"> <!-- Utilisez la même classe que le panier -->
+    <h3>Vos Favoris ❤️</h3>
+    <button id="close-favorites" class="cart-icon">&times;</button>
+  </div>
+  <div class="cart-items"></div> <!-- Même classe que le panier -->
+  <button id="clear-favorites" class="cart-icon" style="background:#ff6b6b">Vider</button>
+</div>
 
+  <!-- MODIF: Icône panier ajoutée ici -->
+ 
+  <div id="cart-icon">
+   
+    <i class="fas fa-shopping-cart" id="cart-button" data-count="0"></i>
+  </div>
 
-    <h1>Nos Catégories Solidaires</h1>
+  <h1>Nos Catégories Solidaires</h1>
 
-    <!-- Vêtements Traditionnels -->
-    <section class="category">
-      <h2>👘 Vêtements Traditionnels</h2>
-      <div class="product">
+  <!-- Vêtements Traditionnels -->
+  <section class="category">
+    <h2>👘 Vêtements Traditionnels</h2>
 
-
-
-
-        <img src="image/caftan2.jpg" alt="Caftan" />
-        <h3>Caftan Marocain</h3>
-        <p>Ce produit sera offert à une femme dans le besoin.</p>
-        <!-- Icône de cœur pour ajouter aux favoris -->
-  <span class="favori" ><i class="fas fa-heart"></i></span>
-        <button    >Donner ce produit</button>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-      <div class="product">
-        <img src="image/jabador.jpg" alt="Jabador" />
-        <h3>Jabador Traditionnel</h3>
-        <p>Ce produit sera offert à une personne dans le besoin.</p>
-        <span class="favori" ><i class="fas fa-heart"></i></span>
-       
-        <button>Donner ce produit</button>
-      </div>
-    </section>
-
-    <!-- Poterie Artisanale -->
-    <section class="category">
-      <h2>🍶 Poterie Artisanale</h2>
-      <div class="product">
-        <img src="image/tajine.jpg" alt="Tajine" />
-        <h3>Tajine Traditionnel</h3>
-        <p>Ce produit sera offert à une famille dans le besoin.</p>
-        <button>Donner ce produit</button>
-      </div>
-      <div class="product">
-        <img src="image/vase.jpg" alt="Vase" />
-        <h3>Vase en Poterie</h3>
-        <p>Ce produit sera offert à une famille dans le besoin.</p>
-        <span class="favori"><i class="fas fa-heart"></i></span>
-        <button>Donner ce produit</button>
-      </div>
-    </section>
-
-    <!-- Nourriture -->
-    <section class="category">
-      <h2>🍪 Nourriture</h2>
-      <div class="product">
-        <img src="image/huile.jpg" alt="Huile" />
-        <h3>Huile d'Argan</h3>
-        <p>Produit redistribué à des familles dans le besoin.</p>
-        <button>Donner ce produit</button>
-      </div>
-      <div class="product">
-        <img src="image/harira.jpg" alt="Harira" />
-        <h3>Soupe Harira</h3>
-        <p>Produit redistribué à ceux qui ont faim.</p>
-        <button>Donner ce produit</button>
-      </div>
-      <div class="product">
-        <img src="image/harira.jpg" alt="Harira" />
-        <h3>Harira</h3>
-        <p>Produit redistribué à ceux qui ont faim.</p>
-        <button>Donner ce produit</button>
-      </div>
-      <div class="product">
-        <img src="image/harira.jpg" alt="Harira" />
-        <h3>naaaa</h3>
-        <p>Produit redistribué à ceux qui ont faim.</p>
-        <span class="favori" ><i class="fas fa-heart"></i></span>
-        <button>Donner ce produit</button>
-      </div>
-      <div class="product">
-        <img src="image/harira.jpg" alt="Harira" />
-        <h3>maaaa</h3>
-        <p>Produit redistribué à ceux qui ont faim.</p>
-        <button>Donner ce produit</button>
-      </div>
-      <div class="product">
-        <img src="image/harira.jpg" alt="Harira" />
-        <h3>baaaa</h3>
-        <p>Produit redistribué à ceux qui ont faim.</p>
-        <button>Donner ce produit</button>
-      </div>
-    </section>
-
-    <!-- Huiles -->
-    <section class="category">
-      <h2>🫒 Huiles Naturelles</h2>
-      <div class="product">
-        <img src="image/zit.jpg" alt="Huile d'Olive" />
-        <h3>Huile d'Olive</h3>
-        <p>Produit soutenant les coopératives locales.</p>
-        <button>Donner ce produit</button>
-      </div>
-    </section>
-
-    <!-- Don -->
-    <section class="category">
-      <div class="product">
-      <h2>❤️ Don</h2>
-      <p>Contribuez sans achat, soutenez directement les causes.</p>
-      <button>Faire un Don</button>
+   <div class="product">
+      <img src="image/caftan1.jpg" alt="Caftan" />
+      <h3> Tekchita Marocaine</h3>
+      <p>Ce produit sera offert à une femme dans le besoin.</p>
+        <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="200">Donner ce produit</button>
     </div>
-    </section>
-  </body>
+
+
+
+
+
+
+    <div class="product">
+      <img src="image/caftan2.jpg" alt="Caftan" />
+      <h3> Caftan Marocaine</h3>
+      <p>Ce produit sera offert à une femme dans le besoin.</p>
+        <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="200">Donner ce produit</button>
+    </div>
+
+    <div class="product">
+      <img src="image/jabador.jpg" alt="Jabador" />
+      <h3> Jabador Traditionnel</h3>
+      <p>Ce produit sera offert à une personne dans le besoin.</p>
+      <p class="price">Prix : 150 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="150">Donner ce produit</button>
+    </div>
+
+
+
+       <div class="product">
+      <img src="image/jelaba.jpg" alt="jelaba" />
+      <h3>jellaba Traditionnel</h3>
+      <p>Ce produit sera offert à une personne dans le besoin.</p>
+      <p class="price">Prix : 150 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="150">Donner ce produit</button>
+    </div>
+
+
+   <div class="product">
+      <img src="image/haik.jpg" alt="haik" />
+      <h3>haik Traditionnel</h3>
+      <p>Ce produit sera offert à une personne dans le besoin.</p>
+      <p class="price">Prix : 150 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="150">Donner ce produit</button>
+    </div>
+
+
+  </section>
+
+  <!-- Poterie Artisanale -->
+  <section class="category">
+    <h2>🍶 Poterie Artisanale</h2>
+    <div class="product">
+      <img src="image/tajine.jpg" alt="Tajine" />
+      <h3>Tajine Traditionnel</h3>
+      <p>Ce produit sera offert à une famille dans le besoin.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="180">Donner ce produit</button>
+    </div>
+    <div class="product">
+      <img src="image/vase1.jpg" alt="Vase" />
+      <h3>Vase en Poterie</h3>
+      <p>Ce produit sera offert à une famille dans le besoin.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+ <div class="product">
+      <img src="image/tasse.jpg" alt="tasse" />
+      <h3>Tasse en en Poterie</h3>
+      <p>Ce produit sera offert à une famille dans le besoin.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div> 
+    
+    
+    <div class="product">
+      <img src="image/jera.jpg" alt="jera" />
+      <h3>Jarres en  Poterie</h3>
+      <p>Ce produit sera offert à une famille dans le besoin.</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+
+       <div class="product">
+      <img src="image/kasea.jpg" alt="kasea" />
+      <h3>kassea 
+        (Le plat en poterie) </h3>
+      <p>Ce produit sera offert à une famille dans le besoin.</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+
+  </section>
+
+  <!-- Nourriture -->
+  <section class="category">
+    <h2>🍪 Nourriture</h2>
+    <div class="product">
+      <img src="image/datte.jpg" alt="datte" />
+      <h3>Datte</h3>
+      <p>Fruit du palmier-dattier, très consommé.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="90">Donner ce produit</button>
+    </div>
+    <div class="product">
+      <img src="image/passtula.jpg" alt="Pastilla" />
+      <h3>Pastilla</h3>
+      <p> Pâtisserie salée sucrée à base de poisson ou poulet</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="30">Donner ce produit</button>
+    </div>
+    <div class="product">
+      <img src="image/smen.jpg" alt="smen" />
+      <h3>Smen </h3>
+      <p>Beurre clarifié fermenté, utilisé en cuisine.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="25">Donner ce produit</button>
+    </div>
+    <div class="product">
+      <img src="image/miel1.jpg" alt="miel" />
+      <h3>Miel d’eucalyptus</h3>
+      <p>Miel typique du Maroc</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="20">Donner ce produit</button>
+    </div>
+    <div class="product">
+      <img src="image/amllo.jpg" alt="Amlou" />
+      <h3>Amlou </h3>
+      <p>Pâte à tartiner à base d’amandes, miel et huile d’argan</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="15">Donner ce produit</button>
+    </div>
+    <div class="product">
+      <img src="image/coscos.jpg" alt="Couscous" />
+      <h3>Couscous</h3>
+      <p> Semoule fine et prête à cuisiner pour vos plats marocains.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="10">Donner ce produit</button>
+    </div>
+  </section>
+
+  <!-- Huiles -->
+  <section class="category">
+    <h2>🫒 Huiles Naturelles</h2>
+    <div class="product">
+      <img src="image/argan.jpg" alt="argan" />
+      <h3>Huile d’argan </h3>
+      <p>Huile rare et délicate, parfaite pour sublimer vos plats traditionnels.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="70">Donner ce produit</button>
+    </div>
+
+
+<div class="product">
+      <img src="image/olive.jpg" alt="olive" />
+      <h3>huile d’olive</h3>
+      <p>Huile d’olive extra vierge, fruitée et riche en bienfaits pour la santé..</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+    <div class="product">
+      <img src="image/barbarie.jpg" alt="barbarie" />
+      <h3>Huile de figue de barbarie</h3>
+      <p>Huile précieuse riche en antioxydants, reconnue pour ses bienfaits anti-âge.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+    <div class="product">
+      <img src="image/fleur.jpg" alt="fleur" />
+      <h3>Huile de rose de Damas</h3>
+      <p>Huile parfumée et délicate, utilisée en cosmétique pour ses propriétés apaisantes.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+    <div class="product">
+      <img src="image/caliptos.jpg" alt="caliptos" />
+      <h3>Huile essentielle d’eucalyptus</h3>
+      <p>Huile naturelle aux vertus purifiantes et revitalisantes.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+    <div class="product">
+      <img src="image/hnoir.jpg" alt="Huile de cumin noir" />
+      <h3>Huile de cumin noir</h3>
+      <p>Huile médicinale aux propriétés anti-inflammatoires et immunostimulantes.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+ <!-- Linge et couvertures -->
+  <section class="category">
+    <h2>Linge et couvertures</h2>
+    <div class="product">
+      <img src="image/zit.jpg" alt="Huile d'Olive" />
+      <h3>Huile d'Olive</h3>
+      <p>Produit soutenant les coopératives locales.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="70">Donner ce produit</button>
+    </div>
+  </section>
+
+
+
+
+  <!-- Accessoires artisanaux -->
+  <section class="category">
+    <h2>Accessoires artisanaux</h2>
+    <div class="product">
+      <img src="image/bijou.jpg" alt="bijou" />
+      <h3>Bijoux en argent berbère</h3>
+      <p>Créations uniques en argent fin, reflet du savoir-faire ancestral.</p>
+        <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="200">Donner ce produit</button>
+    </div>
+
+
+
+
+    <div class="product">
+      <img src="image/sac.jpg" alt="sac" />
+      <h3> sacs en cuir artisanal</h3>
+      <p>Sacs  faits main, alliant élégance et authenticité..</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+    
+    <div class="product">
+      <img src="image/ceinture.jpg" alt="ceinture" />
+      <h3>Ceintures en cuir </h3>
+      <p>Ceintures colorées et résistantes, fabriquées selon les méthodes ancestrales.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+    
+    <div class="product">
+      <img src="image/chapeaux.jpg" alt="chapeaux" />
+      <h3>Chapeaux traditionnels (Tarbouche)</h3>
+      <p>Chapeaux typiques, symboles de l’identité culturelle marocaine.</p>
+      <p class="price">Prix : 200 DH</p>
+      <span class="favori"><i class="fas fa-heart"></i></span>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="120">Donner ce produit</button>
+    </div>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Don -->
+   
+  <section class="category">
+    <h2>❤️ Don</h2>
+    <div class="product">
+      
+      <p>Contribuez sans achat, soutenez directement les causes.</p>
+      <!-- MODIF: Ajout data-price -->
+      <button class="add-to-cart" data-price="0">Faire un Don</button>
+    </div>
+  </section>
+
+  <!-- MODIF: Panier ajouté ici -->
+  <div id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Votre Panier</h3>
+      <button id="close-cart" class="cart-icon">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-total">Total: <span id="cart-total">0</span> DH</div>
+    <button id="validate-cart" class="cart-icon"  >Valider</button>
+  </div>
+
+
+
+
+  
+
+
+  <!-- MODIF: Lien vers le JS ajouté -->
+  <script src="scriptcat.js"></script>
+</body>
 </html>
