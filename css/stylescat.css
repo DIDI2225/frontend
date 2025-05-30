@@ -19,13 +19,21 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 20px;
-  background: #f74848;
+  background: #fc5b5b;
   text-align: center;
 }
 
 h1 {
   color: beige;
 }
+
+
+h2 {
+  color: #121a5e;
+   border-bottom: 2px solid #c0392b ;
+  font-size: 42px;
+}
+
 
 .category {
   margin-bottom: 30px;
@@ -35,12 +43,16 @@ h1 {
   position: relative;
   display: inline-block;
   width: 200px;
+  
   margin: 10px;
   background: #32CD32;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
 }
+
+
 
 .product button {
   padding: 10px 15px;
@@ -62,10 +74,31 @@ h1 {
 }
 
 .product h3 {
+  font-size: 20px;
+  color: #dd1177;
+}
+.price {
+  color: #b03e00;
+  font-weight: bold;
   font-size: 18px;
-  color: #333;
 }
 
+.btn-don {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-don:hover {
+  background: #0056b3;
+}
 .favori {
   position: absolute;
   bottom: 10px;
@@ -179,9 +212,7 @@ h1 {
   text-align: center;
   color: #777;
   padding: 20px;
-} hhhh 
-/
-/* Styles Favoris */
+} 
 
 
 

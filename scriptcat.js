@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-     alert(`Merci pour votre don de ${total.toFixed(2)} DH !
+     alert(`Merci pour votre commande. Le montant total ${total.toFixed(2)} DH !
   passez à le paiement`);
     // Redirection vers une autre page ( paiement.html)
     window.location.href = "paiement.html";
